@@ -53,3 +53,34 @@ for(let i=0;i<5;i++)
 {
     console.log(typeof array[i]);
 }
+
+
+/*
+Stack and heap memory concept in javascript
+
+Stack(Primitive)
+Heap(Non-Primitive)
+
+In stack the variables use different references
+But while dealing with objects, arrays and function which are non-primitive
+and use heap memory then the item has the same reference. So change 
+in one reference can also change other
+*/
+
+let myname = "Sangam";
+let yourname = myname;
+yourname = "Silwal";
+
+console.log("Myname",myname);
+console.log(yourname);
+
+let obj = 
+{
+       email :"SangamSilwal@gmail.com",
+       id:5656
+}
+console.log("Before Changing: ",obj)
+
+let obj2 = obj;
+obj2.email = "silwalSangam@gmail.com";
+console.log("After Changing: ",obj);
