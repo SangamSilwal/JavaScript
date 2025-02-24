@@ -23,3 +23,32 @@ if no username was given then it will return undefined
 so we checked the stuff using if(!username)
 
 */
+
+
+
+
+
+
+/*
+In JavaScript While using function we can also give multiple value to the function
+We can use rest or spread operater i.e ... (3 dots)
+
+Note: The spread operator will return a list hai tah
+*/
+
+function Numberhai(...num1)
+{
+    return num1
+}
+
+console.log(Numberhai(4,5,23,665,"Sangam"));   //--> It will return a list
+
+
+// passing object in the function
+function handleObj (obj)
+{
+    console.log(`Hi ${obj.name}`)
+}
+handleObj({
+    "name":"Sangam Silwal"
+})
