@@ -64,5 +64,3 @@ arrayOfobject = [
 
 arrayOfobject.forEach((item) => (console.log(`Language Name is ${item.languageName}`)))
 arrayOfobject.forEach((item) => (console.log(`File name is ${item.languageFile}`)))
-
-
