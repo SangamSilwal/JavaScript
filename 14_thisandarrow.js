@@ -51,7 +51,14 @@ const returnObj = () => ({"username":"Sangam Silwal"})
 console.log(returnObj())
 
 
+/*
+An arrow function expression is a compact alternative
+ to a traditional function expression, with some semantic
+  differences and deliberate limitations in usage: 
+  Arrow functions don't have their own bindings to this ,
+ arguments , or super , and should not be used as methods.
 
+*/
 
 
 
