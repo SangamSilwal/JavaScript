@@ -37,7 +37,7 @@ const obj = [
 TotalCheckOut = obj.reduce((accumulator,item) =>(accumulator + item.price),0 )
 console.log(TotalCheckOut)
 
-
+//using for each
 let a = 0;
 obj.forEach((item)=>(a+= item.price))
 console.log(a)
