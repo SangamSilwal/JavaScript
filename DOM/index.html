@@ -12,20 +12,46 @@
     </style>
 </head>
 <body  class="bg-black">
-    <div>
-        <h3 class="heading" id="parag">Dom learning By myself</h1>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem soluta, consectetur ab nemo reiciendis, similique hic necessitatibus, officia ipsam dolores dolor! Vero qui, nostrum deleniti dolor autem eligendi quae minus?</p>
-        <h3 id="h21">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nostrum ratione porro, aliquid quaerat quas voluptate quis voluptas soluta in quae eveniet corporis quidem impedit enim quia iusto consectetur. Nostrum.</h1>
-        <h3 id="h22">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error aspernatur deserunt explicabo blanditiis doloribus, libero hic voluptatum pariatur omnis eos eius voluptate iure, saepe, ab debitis illum porro? Delectus, non?</h1>
-        <ul>
-            <li class = "li-Elements">one</li>
-            <li class = "li-Elements">onee</li>
-            <li class = "li-Elements">two</li>
-            <li class = "li-Elements">Three</li>
-
-        </ul>
-
+    <div class="parent">
+        <div class="child">sunday</div>
+        <div class="child">Monday</div>
+        <div class="child">tuesday</div>
+        <div class="child">Wednesday</div>
+        <div class="child">Thursday</div>
     </div>
     
 </body>
+<script>
+    const par = document.querySelector('.parent')
+    // console.log(par)
+    // console.log(par.children)
+    const child = par.children
+    // console.log(child)
+    // console.log(child[1].innerHTML)
+    // for (let index = 0; index < child.length; index++) {
+    //     console.log(child[index].innerHTML);
+        
+    // }
+
+
+
+
+
+    // firstElementChild and LastElementChild in js
+    //we can access the first element child and last element of the child .
+    // console.log(par.firstElementChild);
+    // console.log(par.lastElementChild.innerHTML); 
+
+
+    //moving to parent through child'
+    const dayone  = document.querySelector('.child');
+    console.log(dayone.parentElement)
+    console.log(dayone.nextElementSibling)
+    // console.log(dayone.parentElement)
+
+
+
+    console.log("Nodes: --> ",par.childNodes)
+  
+</script>
 </html>
