@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sangam Silwal</title>
+</head>
+<body>
+    <ul>
+        <li class="language">Python</li>
+        <li class="language">Ruby</li>
+    </ul>
+</body>
+<script>
+    function optimizedApproach(languageName)
+    {
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(languageName))
+        document.querySelector('.language').appendChild(li)
+    }
+    optimizedApproach("rumilst")
+    optimizedApproach("rumilst")
+
+
+
+
+    //Repalcing the language name
+   
+//     first--> select the query
+//     second --> create element 
+//     third --> add favorable text in the element
+//     fourth --> use selectedquery.replaceWith(created-element)
+// 
+    const secondAdded = document.querySelector("li:nth-child(2)")
+    const newla = document.createElement("li")
+    newla.textContent = "Java"
+    secondAdded.replaceWith(newla)
+
+
+
+    //edit
+    const thirdAdded = document.querySelector("li:first-child");
+    console.log(thirdAdded)
+    thirdAdded.outerHTML = "<li>hello</li>"
+
+    //delect
+    const toDelect = document.querySelector("li:last-child")
+    console.log(toDelect)
+    toDelect.remove()
+</script>
+</html>
