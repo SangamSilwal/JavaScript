@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sangam</title>
+</head>
+<body>
+    
+</body>
+<script>
+/*
+Here we will learn to create a div element 
+*/
+// const p = document.createElement('p')
+// console.log(p)
+const div = document.createElement('div')
+
+div.className = "main"
+div.id = Math.round(Math.random()*10+1)
+
+// syntax; div.setAttribute("key","value") ---> gottcha pass the key-value pair --> this is more optimized method than className and is
+div.setAttribute('title','MeroNaame');
+
+
+// div.innerHTML = "Hello my name is sangam silwal"
+div.style.backgroundColor = 'green'
+div.style.padding = "12px"
+
+//This is the another method to append text inside the div without using innerHtml
+const addText = document.createTextNode("Hello this is the text created from create text node")
+div.appendChild(addText)
+
+//This will show the div in the main html file
+document.body.appendChild(div)
+console.log(div)
+
+
+
+</script>
+</html>
