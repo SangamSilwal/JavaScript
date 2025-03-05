@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22 DOM</title>
+</head>
+<style>
+    
+    .container{
+        border: solid rebeccapurple;
+        display: flex;
+        justify-content: center;
+    }
+    .wrapper{
+        border: solid red;
+        width: 50rem;
+        display: flex;
+        justify-content: center;
+        
+    }
+    .list{  
+        display: flex;
+        justify-content:center;
+        width: 500px;
+        height: 50px;
+        border: solid rgb(73, 224, 68);
+        background-color: rgb(25, 34, 7);
+        
+        
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="wrapper">
+        <li class="list">1st</li>
+        <li class="list">2nd</li>
+        <li class="list" id ="three">3rd</li>
+        <li class="list">4th</li>
+        <a href="www.google.com" id="google">google</a>
+        </div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.container')
+    console.log(parent)
+
+    const grandChild = document.getElementById('three')
+    console.log(grandChild)
+
+
+/*
+Research this by yourself about the event (e)
+type, timestamp,defaultPrevented
+target, toElement, srcElement, currentTarget
+clientX, clientY, screenX, screenY
+altykey, ctrlkey, shiftkey, keycode
+
+*/
+
+    parent.addEventListener('click',function(e)
+{
+    console.log("Div conatainer is clicked")
+},false)   
+
+
+
+/*
+Talking about the main idea there is also a hidden parameter called false or true inside it
+->Note: By default it is false
+*/
+    grandChild.addEventListener('click',function(e)
+{
+    console.log("Three is clicked");
+    e.stopPropagation()
+},false)
+//after using e.stopPropagation then only three is clicked 
+
+
+
+
+
+//when we have both value to default i.e false ---> then three is clicked is first printed
+// When we switched the false to true ---> then Div container is clicked is first printed
+
+/*
+Event propagtion
+Event Bubbling---> goes from down to top 
+event capturing --> goes form top to down
+
+*/
+
+const goog = document.querySelector('#google')
+goog.addEventListener('click',function(e)
+{
+    e.preventDefault()    //Basically preventDefault prevent the page from shifting to google.com
+    console.log("Google is clicked")
+    e.stopPropagation()
+})
+
+
+//removing the div element
+document.querySelector('.container').addEventListener('click',function(e)
+{
+    console.log(e.target.tagName);
+    let removeIt = e.target.parentNode;
+    console.log(removeIt)
+    // console.log(removeIt.parentNode)
+  
+   (e.target.tagName === "LI")? removeIt.parentNode.removeChild(removeIt) : "";
+})
+
+
+
+</script>
+</html>
