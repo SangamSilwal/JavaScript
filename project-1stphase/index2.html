@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+
+        <label for="">Height</label>
+        <input type="text" id="height">
+        <label for="">Weight</label>
+        <input type="text" id="Weight">
+        <button type="submit">Submit</button>
+    </form>
+    <p></p>
+</body>
+<script>
+    const form = document.querySelector('form')
+    form.addEventListener('submit',function(e){
+        e.preventDefault()
+        const height = parseInt(document.querySelector('#height').value)
+        const weight = parseInt(document.querySelector('#Weight').value)
+        const result = document.querySelector('p')
+        const bmi = (weight/((height*height)/10000)).toFixed(2)
+        result.innerHTML = `<span>${bmi}</span>`
+    })
+</script>
+</html>
