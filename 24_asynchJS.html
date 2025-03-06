@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynch js</title>
+</head>
+<body>
+    <p>Mero Naam Sangam Silwal ho</p>
+    <button>Stop</button>
+
+    
+    
+</body>
+<script>
+    const sayInEnglish = function()
+    {
+        console.log("Sangam")
+    }
+    const inHtml = function()
+    {
+        document.querySelector('p').innerHTML = "Hello Sangam the text has been changed";
+    }
+    const changeTextt = setTimeout(inHtml,3000); //--> The setTimeout generally do is after 3 sec it will set the innerHtml to hello sangam thetest ...
+
+    document.querySelector('button').addEventListener('click',function(e)
+    {
+        clearTimeout(changeTextt)    //--clearTimeout basically clear the timeout of the changeTextt
+    })
+
+
+
+
+
+
+
+
+
+
+
+    //setInterval and clearInterval
+    const newElement = document.createElement('p')
+    let textNode = document.createTextNode(`hello the date is  + ${Date.now} `)
+    console.log(newElement)
+    console.log(textNode)
+
+
+    newElement.appendChild(textNode)
+    // document.body.appendChild(newElement)
+
+    const repeateThis = function(str)
+    {
+        document.body.appendChild(str)
+        console.log("hello")
+    }
+    // setInterval(repeateThis,3000,textNode) 
+    
+
+</script>
+</html>
