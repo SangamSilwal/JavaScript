@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changing site</title>
+</head>
+<style>
+   .wrap{
+    border: solid 2px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+   }
+    .container{
+        margin-top: 200px;
+        box-sizing: border-box;
+        border: double 5px;
+        border-radius: 20px;
+        height: 500px;
+        width: 300px;
+        display: flex;
+        background-color: #414141;
+        
+
+    }
+    ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    li{
+        border: solid 2px;
+        margin: 20px;
+        padding: 10px;
+        border-radius: 20px;
+        background-color: beige;
+        box-shadow:0 0 15px #ffffff;
+        color: rgb(43, 40, 40);
+        list-style: none;
+       
+    }
+
+    
+</style>
+<body>
+    <button id ="start">Start</button>
+    <button id ="stop">Stop</button>
+
+    <div class="wrap">
+    <div class="container">
+        <ul>
+            <li class="list-class">This is the first List class</li>
+            <li class="list-class">This is the second list class</li>
+            <li class="list-class">This is the third list class</li>
+            <li class="list-class">This is the fourth list class</li>
+        </ul>
+    </div>
+</div>
+    
+</body>
+<script src="colorchange.js"></script>
+</html>
