@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    /*
+    XMLHttpRequest (XHR) objects are used to interact with servers.
+     You can retrieve data from a URL without having to do a full page refresh. 
+     This enables a Web page to update just part of a page without disrupting what the user is doing.
+    */
+   requestUrl = "https://ipinfo.io/161.185.160.93/geo"
+    const xhr = new XMLHttpRequest(); //--Initializing
+    xhr.open('GET',requestUrl)
+    /*
+    here the onreadystatechange will take a function and we have to define inside the function
+    about what to do next
+
+    similary the next important thing is -- after doing open we have to send inorder to see the file
+    */
+    xhr.onreadystatechange = function() {
+        console.log(xhr.readyState)      //--> The ready state will print the 2,3,4 
+        if(xhr.readyState === 4)
+    {
+        console.log(this.responseText)
+    }
+    }
+    xhr.send()
+
+
+</script>
+</html>
