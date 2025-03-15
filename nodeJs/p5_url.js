@@ -21,6 +21,12 @@ const newServer = server.createServer((req,res)=>{
                 const name = myUrl.query["nma"]
                 res.end(`<h1>Hi ${name}</h1>`);
                 break;
+            case "/signUp":
+                if(req.method === "GET") return res.end("This is a sign up form")
+                else if(req.method === "POST"){
+            //DB query
+            
+                }
             default:
                 res.end("404 Not found");
                 break;
