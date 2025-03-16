@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "p4_http.js",
   "scripts": {
-    "start": "node p7_express.js"
+    "start": "node p8_restapi.js"
   },
   "author": "",
   "license": "ISC",
