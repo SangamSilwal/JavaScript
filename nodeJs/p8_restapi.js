@@ -48,7 +48,22 @@ app.use(express.urlencoded({extended: true}))
 const port = 8000;
 
 app.get("/api/users", (req,res)=>{
+    res.setHeader("myname","Sangam Silwal") //---> This is a custom header
+      //--->It is used to send the header to the client
     console.log(req.headers)
+    
+
+    // While adding header :
+    //Always use X-headname : It is a good practrice
+/*
+HTTP headers are an important part of the 
+API request and response as they represent
+the meta-data associated with the API request and response
+
+Headers carry information for the request and response body
+*/
+
+
     return res.json(users);
     // console.log("Data Send");
 })
@@ -69,17 +84,26 @@ app.get("/api/users/:id",(req,res)=>{
     return res.json(user)
 })
 
+
+
+
+
 app.get("/api/users/name/:name",(req,res) => {
     const name = req.params.name;
     const user = users.find((user) => user.first_name === name);
     return res.json(user);
 })
 
+
+
+//there are many status code 
+//for creating a new users the status code is 201 as success
+
 app.post("/api/users",(req,res) => {
     const body = req.body
     users.push({...body,id:users.length+1})
     fs.writeFile("./MOCK_DATA.json",JSON.stringify(users),(ress,data)=>{
-        return res.json({status:"Completed"})
+        return res.status(201).json({status:"Completed"})
     })
 })
 
@@ -93,6 +117,10 @@ app.delete("/api/users/:id",(req,res) => {
         return res.json({"Status":"Success","id":user_id.id})
     })
 })
+
+
+
+
 
 app.listen(port,()=>{
     console.log("Hey listening to the current port "+port);

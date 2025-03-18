@@ -11,20 +11,3 @@ End the request-response cycle.
 Call the next middleware function in the stack.
 
 */
-
-
-const express = require('express')
-const fs = require('fs')
-// const users = require('./MOCK_DATA.json')
-
-
-const app = express();
-
-app.get('/',(req,res) => {
-  
-
-})
-
-app.listen(8000,()=>{
-    console.log("App is listening")
-})
