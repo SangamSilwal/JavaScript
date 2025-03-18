@@ -21,7 +21,7 @@ DELETE/users/1 -- Delete the user with id 1
 
 
 const express = require("express");
-const users = require("./MOCK_DATA.json");
+const users = require("../MOCK_DATA.json");
 const app = express();
 const fs = require("fs");
 const { json } = require("stream/consumers");

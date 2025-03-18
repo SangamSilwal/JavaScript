@@ -1,17 +1,9 @@
-Hello --/--Time: 1742052373897
-Hello --/--Time: 1742052376899
-Hello --/--Time: 1742052379086
-Hello --/--Time: 1742052442735
-Hello --/about--Time: 1742052462607
-Hello --/--Time: 1742052609922
-Hello --/about--Time: 1742052615652
-Hello --/about?name=sangam--Time: 1742052622821
-Hello --/aboutdfaskdna--Time: 1742052635551
-Hello --/aboutdfaskdna--Time: 1742052932225
-Hello --/about?nma=sangam--Time: 1742052945839
-Hello --/about?nma=sangam--Time: 1742052989074
-Hello --/about?nma=sangam&id=566&surname=90silwal--Time: 1742053007082
-Hello --/about?nma=sangam&id=566&surname=90silwal--Time: 1742053071446
-Hello --/about?nma=sangam&id=566&surname=90silwal--Time: 1742053072709
-Hello --/about?nma=sangam&id=566&surname=90silwal--Time: 1742053165665
-Hello --/about?nma=SubhamBajracharye--Time: 1742053181313
+Model view Controller 
+projectFolder--
+               -Controller
+               -middleWare
+               -models
+               -routes
+               -views
+               -index.js
+               -connection.js
