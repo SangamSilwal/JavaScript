@@ -5,7 +5,11 @@ const router = express.Router();
 
 //exporting different functions from controllers
 //Here the controllers intereact with the db
-const {handleGetAllUsers,handleGetUserById,handleDeleteUser,handlePatch, handlePostRequest} = require("../controllers/user")
+const {handleGetAllUsers,
+    handleGetUserById,
+    handleDeleteUser,
+    handlePatch, 
+    handlePostRequest} = require("../controllers/user")
 
 
 
